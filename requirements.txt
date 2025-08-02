@@ -1,0 +1,8 @@
+autogen-agentchat
+autogen-ext[openai]
+playwright
+python-dotenv
+requests
+Pillow
+qrcode[pil]
+google-genai
