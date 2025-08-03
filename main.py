@@ -6,8 +6,8 @@ from autogen_agentchat.teams import RoundRobinGroupChat
 from autogen_ext.models.openai import OpenAIChatCompletionClient
 
 from agents.content_creator import ContentCreatorAgent
-from agents.veo3_prompt_agent import Veo3PromptAgent
-from agents.veo3_with_tools import Veo3APIAgent
+from agents.seedance_prompt_agent import SeedancePromptAgent
+from agents.seedance_with_tools import SeedanceAPIAgent
 from agents.gpt_image_prompt_agent import DallEPromptAgent
 from agents.gpt_image_agent import GPT4oImageAgent
 from agents.media_selector import MediaSelectorAgent
@@ -25,9 +25,9 @@ async def main():
     
     # Create agents
     content_creator = ContentCreatorAgent(model_client).agent
-    veo3_prompt_agent = Veo3PromptAgent(model_client).agent
-    veo3_api = Veo3APIAgent(model_client)
-    veo3_api_agent = veo3_api.agent
+    seedance_prompt_agent = SeedancePromptAgent(model_client).agent
+    seedance_api = SeedanceAPIAgent(model_client)
+    seedance_api_agent = seedance_api.agent
     gpt_image_prompt_agent = DallEPromptAgent(model_client).agent
     dalle_api = GPT4oImageAgent(model_client)
     gpt_image_api_agent = dalle_api.agent
@@ -49,8 +49,8 @@ async def main():
             media_selector_agent,      # 2. User selects image or video  
             gpt_image_prompt_agent,    # 3a. If image: create prompt 
             gpt_image_api_agent,       # 4a. If image: generate image
-            veo3_prompt_agent,         # 3b. If video: create prompt
-            veo3_api_agent,            # 4b. If video: generate video
+            seedance_prompt_agent,     # 3b. If video: create prompt
+            seedance_api_agent,        # 4b. If video: generate video
             content_review_agent,      # 5. Human review (post/edit/regenerate/cancel)
             rednote_publisher_agent    # 6. Publish to RedNote when approved
         ],

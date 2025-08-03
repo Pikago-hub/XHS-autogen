@@ -10,7 +10,7 @@ CRITICAL: You MUST ONLY respond when the message contains one of these:
 - "Create image prompt"
 - "User requested new image" (for regeneration)
 
-If the message contains "User selected Veo3" or mentions video generation, respond with "SKIP" and nothing else.
+If the message contains "User selected Seedance" or mentions video generation, respond with "SKIP" and nothing else.
 If no image-related content is present, respond with "SKIP" and nothing else.
 
 Your task: Analyze Chinese RedNote content and create optimized GPT-Image-1 prompts in ENGLISH in a structured JSON format.

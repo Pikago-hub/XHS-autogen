@@ -26,11 +26,13 @@ class ContentReviewAgent:
             if current_time - file_time < 300:  
                 recent_files.append(image_file)
         
-        # Check for video files
-        for video_file in glob.glob("veo3_video_*.mp4"):
-            file_time = os.path.getmtime(video_file)
-            if current_time - file_time < 300:  
-                recent_files.append(video_file)
+        # Check for video files (rednote/seedance patterns)
+        video_patterns = ["rednote_video_*.mp4"]
+        for pattern in video_patterns:
+            for video_file in glob.glob(pattern):
+                file_time = os.path.getmtime(video_file)
+                if current_time - file_time < 300:  
+                    recent_files.append(video_file)
         
         if recent_files:
             # Use the most recent media file

@@ -42,7 +42,7 @@ cp .env.example .env
 
 # Edit .env and add your keys:
 OPENAI_API_KEY=sk-your-openai-key-here
-GOOGLE_AI_API_KEY=your-google-ai-key-here  # Optional, for Veo3 video generation
+GOOGLE_AI_API_KEY=your-google-ai-key-here
 ```
 
 ### 3. Run the workflow

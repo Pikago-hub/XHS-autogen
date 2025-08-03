@@ -106,7 +106,7 @@ Image generated successfully using gpt-image-1."""
             system_message="""You are the gpt-image-1 generation agent.
 
 CRITICAL: You MUST ONLY respond when you receive a detailed image prompt (either JSON format or descriptive text).
-If the message contains "SKIP", "User selected Veo3", or mentions video, respond with "SKIP" and nothing else.
+If the message contains "SKIP", "User selected Seedance", or mentions video, respond with "SKIP" and nothing else.
 If no image prompt is present, respond with "SKIP" and nothing else.
 
 When you receive an approved image prompt:
